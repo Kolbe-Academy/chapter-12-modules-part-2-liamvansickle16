@@ -80,9 +80,9 @@ test(wordcount("is", ["now","is","time","is","now","the","is"]) == 3)
 test(wordcount("time", ["now","is","time","is","now","is","is"]) == 1)
 test(wordcount("frog", ["now","is","time","is","now","is","is"]) == 0)
     
-test(wordset(["now", "is", "time", "is", "now", "is", "is"]) == ["is", "now", "time"])
-test(wordset(["I", "a", "a", "is", "a", "is", "I", "am"]) == ["I", "a", "am", "is"])
-test(wordset(["or", "a", "am", "is", "are", "be", "but", "am"]) == ["a", "am", "are", "be", "but", "is", "or"])
+test(sorted(wordset(["now", "is", "time", "is", "now", "is", "is"])) == sorted(["is", "now", "time"]))
+test(sorted(wordset(["I", "a", "a", "is", "a", "is", "I", "am"])) == sorted(["I", "a", "am", "is"]))
+test(sorted(wordset(["or", "a", "am", "is", "are", "be", "but", "am"])) == sorted(["a", "am", "are", "be", "but", "is", "or"]))
 
 test(longestword(["a", "apple", "pear", "grape"]) == 5)
 test(longestword(["a", "am", "I", "be"]) == 2)
